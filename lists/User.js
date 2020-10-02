@@ -11,7 +11,7 @@ const {
   const { atTracking } = require("@keystonejs/list-plugins")
   const { LocalFileAdapter } = require("@keystonejs/file-adapters")
   const fileAdapter = new LocalFileAdapter({
-    src: "next.js/.next/static/img",
+    src: "static/img",
     path: "/img"
   })
   function deleteImageFileFromExistingItem(item) {

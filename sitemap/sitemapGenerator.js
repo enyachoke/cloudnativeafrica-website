@@ -2,7 +2,7 @@ const { LocalFileAdapter } = require("@keystonejs/file-adapters")
 const { Readable } = require("stream")
 
 const fileAdapter = new LocalFileAdapter({
-  src: "next.js/.next/static",
+  src: "static",
   path: "/",
   getFilename: () => "sitemap.xml"
 })
@@ -42,6 +42,7 @@ const generator = {
       this.addTags(data.allTags)
       this.addFooter()
       const readable = Readable.from(stream)
+      console.log('Save sitemap')
       await fileAdapter.save({ stream: readable, filename: "sitemap.xml" })
     } catch (e) {
       console.log(e)

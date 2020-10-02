@@ -13,7 +13,7 @@ const {
   const { userIsAdmin, isUser, userIsAdminOrOwner } = require("../auth/Acl")
   const sitemapGenerator = require("../sitemap/sitemapGenerator")
   const fileAdapter = new LocalFileAdapter({
-    src: "next.js/.next/static/img",
+    src: "src/static/img",
     path: "/img"
   })
   

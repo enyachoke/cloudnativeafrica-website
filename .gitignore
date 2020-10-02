@@ -116,3 +116,5 @@ dist
 .pnp.*
 docker-data/
 .env
+static/*
+!static/.gitkeep

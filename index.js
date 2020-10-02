@@ -10,7 +10,7 @@ const initialiseData = require('./initial-data');
 
 const { MongooseAdapter: Adapter } = require('@keystonejs/adapter-mongoose');
 const PROJECT_NAME = 'cloudnative-site-api';
-const adapterConfig = { mongoUri: process.env.DB_URL };
+const adapterConfig = { mongoUri: process.env.MONGO_URI };
 
 
 const PageSchema = require("./lists/Page")
