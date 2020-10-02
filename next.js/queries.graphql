@@ -1,0 +1,14 @@
+
+
+
+mutation Authuser{
+    authenticateUserWithPassword(email: "admin@admin.com", password: "password"){
+     token
+    }
+}
+query currentUser{
+    authenticatedUser{
+     id,
+      name
+    }
+  }

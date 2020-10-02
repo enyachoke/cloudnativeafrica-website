@@ -1,0 +1,19 @@
+version: '3.6'
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb-cloudnative
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    ports:
+      - 27017:27017
+    volumes:
+      - ./docker-data:/data/db
+    networks:
+      - mongodb_net
+
+networks:
+  mongodb_net:
+    driver: bridge
